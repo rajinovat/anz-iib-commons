@@ -5,10 +5,28 @@
 	<artifactId>anz-iib-commons</artifactId>
 	<version>0.0.0.1-SNAPSHOT</version>
 
-	<properties>
-		<log4j2.version>2.5</log4j2.version>
-		<org.springframework.version>4.1.7.RELEASE</org.springframework.version>
-	</properties>
+        <properties>
+                <log4j2.version>2.5</log4j2.version>
+                <org.springframework.version>4.1.7.RELEASE</org.springframework.version>
+                 <gitUrl>https://github.com/rajinovat/HttpJsonToHttpJson.git</gitUrl>
+        </properties>
+        <scm>
+                <connection>scm:git:${gitUrl}</connection>
+                <developerConnection>scm:git:${gitUrl}</developerConnection>
+        </scm>
+
+<distributionManagement>
+                <repository>
+                        <id>release</id>
+                        <url>http://localhost:8081/artifactory/ext-release-local</url>
+                        <uniqueVersion>true</uniqueVersion>
+                </repository>
+                <snapshotRepository>
+                        <id>snapshot</id>
+                        <url>http://localhost:8081/artifactory/ext-snapshot-local</url>
+                        <uniqueVersion>true</uniqueVersion>
+                </snapshotRepository>
+        </distributionManagement>
 
 
 	<dependencies>
